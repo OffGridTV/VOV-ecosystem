@@ -33,7 +33,9 @@ const siteData = {
     imageAlt: 'VOV ecosystem process and investigation classification diagram'
   },
   footer: {
-    statement: 'VOV is an independent verification initiative for public accountability.',
+    logoSrc: '../../assets/EVAI Logo.svg',
+    logoAlt: 'EVAI Logo',
+    statement: 'Copyright 2026 EVAI, All Rights Reserved',
     links: [
       { label: 'Methodology', href: '#methodology' },
       { label: 'Investigations', href: '#investigations' },
@@ -52,6 +54,5 @@ app.innerHTML = `
       <img src="${siteData.infographic.imageSrc}" alt="${siteData.infographic.imageAlt}" class="vov-infographic" />
     </div>
   </section>
-  ${renderHowVovWorks(siteData.howVovWorks)}
   ${renderFooter(siteData.footer)}
 `;
