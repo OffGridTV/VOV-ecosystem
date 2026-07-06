@@ -1,7 +1,4 @@
-﻿import { renderHeader } from '../../components/header.js';
-import { renderHero } from '../../components/hero.js';
-import { renderHowVovWorks } from '../../components/howVovWorks.js';
-import { renderFooter } from '../../components/footer.js';
+﻿import { renderFooter } from '../../components/footer.js';
 
 const app = document.getElementById('app');
 
@@ -36,22 +33,14 @@ const siteData = {
     logoSrc: '../../assets/EVAI Logo.svg',
     logoAlt: 'EVAI Logo',
     statement: 'Copyright 2026 EVAI, All Rights Reserved',
-    links: [
-      { label: 'Methodology', href: '#methodology' },
-      { label: 'Investigations', href: '#investigations' },
-      { label: 'About', href: '#about' }
-    ]
+    links: []
   }
 };
 
 app.innerHTML = `
-  <header class="hero">
-    ${renderHeader({ brand: siteData.brand, navItems: siteData.navItems })}
-    ${renderHero(siteData.hero)}
-  </header>
-  <section class="vov-infographic-section">
-    <div class="vov-infographic-container">
-      <img src="${siteData.infographic.imageSrc}" alt="${siteData.infographic.imageAlt}" class="vov-infographic" />
+  <section class="vov-header-image">
+    <div class="vov-header-container">
+      <img src="${siteData.infographic.imageSrc}" alt="${siteData.infographic.imageAlt}" class="vov-header-img" />
     </div>
   </section>
   ${renderFooter(siteData.footer)}

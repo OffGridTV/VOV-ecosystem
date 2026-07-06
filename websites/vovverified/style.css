@@ -83,6 +83,28 @@ body{
     color:#666;
 }
 
+/* ---------- VOV Header Image ---------- */
+
+.vov-header-image{
+    width:100%;
+    padding:40px 20px;
+    background:#ffffff;
+}
+
+.vov-header-container{
+    max-width:1200px;
+    margin:0 auto;
+    display:flex;
+    justify-content:center;
+}
+
+.vov-header-img{
+    max-width:100%;
+    height:auto;
+    display:block;
+    border-radius:12px;
+}
+
 /* ---------- VOV Infographic ---------- */
 
 .vov-infographic-section{
