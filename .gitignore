@@ -1,0 +1,13 @@
+# OS and editor noise
+.DS_Store
+Thumbs.db
+.vscode/
+
+# Logs and local env files
+*.log
+.env
+.env.*
+
+# Temporary capture artifacts
+websites/vovverified/fullpage.png
+websites/vovverified/hero-shot.jpg
