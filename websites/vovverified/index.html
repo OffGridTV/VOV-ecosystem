@@ -4,14 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Redirecting to VOV Verified</title>
-    <meta http-equiv="refresh" content="0; url=/">
     <script>
-        if (window.location.protocol.startsWith('http')) {
+        if (window.location.pathname !== '/') {
             window.location.replace('/');
         }
     </script>
 </head>
 <body>
-    <p>Redirecting to the homepage...</p>
+    <noscript>
+        <p><a href="/">Continue to homepage</a></p>
+    </noscript>
 </body>
 </html>
