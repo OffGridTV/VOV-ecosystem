@@ -1,4 +1,5 @@
-﻿import { renderFooter } from '../../components/footer.js';
+﻿import { renderHero } from '../../components/hero.js';
+import { renderFooter } from '../../components/footer.js';
 
 const app = document.getElementById('app');
 
@@ -21,6 +22,10 @@ const siteData = {
       { label: 'Read the VOV Standard', href: '#standard', variant: 'secondary' }
     ]
   },
+  landingImage: {
+    imageSrc: '../../assets/VOV landing page image 7-26.png',
+    imageAlt: 'VOV Landing Page'
+  },
   infographic: {
     imageSrc: '../../assets/VOV landing page image.png',
     imageAlt: 'VOV Verified investigation status and evidence classification infographic'
@@ -38,10 +43,13 @@ const siteData = {
 };
 
 app.innerHTML = `
-  <section class="vov-header-image">
-    <div class="vov-header-container">
-      <img src="${siteData.infographic.imageSrc}" alt="${siteData.infographic.imageAlt}" class="vov-header-img" />
+  <section class="landing-image-section">
+    <div class="landing-image-container">
+      <img src="${siteData.landingImage.imageSrc}" alt="${siteData.landingImage.imageAlt}" class="landing-image" />
     </div>
+  </section>
+  <section class="hero-section">
+    ${renderHero(siteData.hero)}
   </section>
   ${renderFooter(siteData.footer)}
 `;
