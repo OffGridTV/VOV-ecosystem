@@ -20,7 +20,6 @@ app.innerHTML = `
   <!-- Hero Section -->
   <section class="hero">
     <div class="hero-content">
-      <p class="hero-kicker">VOV VERIFIED</p>
       <h1>Independent Verification<br>for Real-World Decisions</h1>
       <p class="hero-lead">A simple question shouldn't require twenty websites, six videos, two AI conversations, and a Reddit rabbit hole.</p>
       <p class="hero-description">VOV independently investigates real-world claims through transparent methodology, documented evidence, and public results.</p>
