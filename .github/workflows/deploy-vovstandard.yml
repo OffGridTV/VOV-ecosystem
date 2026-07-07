@@ -29,8 +29,6 @@ jobs:
         run: |
           mkdir -p _site
           cp -r websites/vovstandard/. _site/
-          cp -r components _site/components
-          cp -r assets _site/assets
           cp -r constitution _site/constitution
           cp -r investigations _site/investigations
           mkdir -p _site/websites/vovverified

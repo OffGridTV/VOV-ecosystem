@@ -26,7 +26,7 @@ app.innerHTML = `
       <p class="hero-description">VOV independently investigates real-world claims through transparent methodology, documented evidence, and public results.</p>
       <div class="hero-buttons">
         <a href="#investigations" class="btn btn-primary">Browse Investigations</a>
-        <a href="#standard" class="btn btn-secondary">Read the VOV Standard</a>
+        <a href="https://vovstandard.com/" class="btn btn-secondary">Read the VOV Standard</a>
       </div>
       <div class="hero-publisher">
         <p>Published by Off Grid TV</p>

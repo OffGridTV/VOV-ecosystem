@@ -1,0 +1,67 @@
+name: Publish VOV Standard Deploy Repo
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+    paths:
+      - 'websites/vovstandard/**'
+      - 'constitution/**'
+      - 'investigations/**'
+      - 'websites/vovverified/style.css'
+      - '.github/workflows/publish-deploy-repos.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Build deploy artifact
+        shell: bash
+        run: |
+          set -euo pipefail
+          rm -rf out
+          mkdir -p out
+          cp -r websites/vovstandard/. out/
+          cp -r constitution out/constitution
+          cp -r investigations out/investigations
+          mkdir -p out/websites/vovverified
+          cp websites/vovverified/style.css out/websites/vovverified/style.css
+
+          touch out/.nojekyll
+          printf '%s\n' "vovstandard.com" > out/CNAME
+
+      - name: Push artifact to deploy repository
+        shell: bash
+        env:
+          DEPLOY_TOKEN: ${{ secrets.DEPLOY_REPO_TOKEN }}
+          DEPLOY_OWNER: ${{ vars.DEPLOY_REPO_OWNER }}
+          FALLBACK_OWNER: ${{ github.repository_owner }}
+        run: |
+          set -euo pipefail
+
+          if [ -z "${DEPLOY_TOKEN}" ]; then
+            echo "DEPLOY_REPO_TOKEN secret is required."
+            exit 1
+          fi
+
+          OWNER="${DEPLOY_OWNER}"
+          if [ -z "${OWNER}" ]; then
+            OWNER="${FALLBACK_OWNER}"
+          fi
+
+          cd out
+          git init
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add .
+          git commit -m "Deploy ${GITHUB_REPOSITORY}@${GITHUB_SHA} to vovstandard" || echo "No changes to commit"
+          git branch -M main
+          git remote add origin "https://x-access-token:${DEPLOY_TOKEN}@github.com/${OWNER}/vovstandard-deploy.git"
+          git push --force origin main
