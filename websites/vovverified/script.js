@@ -8,7 +8,7 @@ const siteData = {
     alt: 'VOV process overview and evidence flow'
   },
   footer: {
-    logoSrc: 'assets/EVAI Logo.svg',
+    logoSrc: '/assets/EVAI%20Logo.svg',
     logoAlt: 'EVAI Logo',
     publishedBy: 'Off Grid TV',
     governedBy: 'The VOV Standard',

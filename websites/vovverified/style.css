@@ -142,6 +142,7 @@ body.no-scroll-mode {
 }
 
 .footer-logo {
+    width: 96px;
     max-width: 96px;
     height: auto;
     display: block;
@@ -150,7 +151,9 @@ body.no-scroll-mode {
 }
 
 .footer-logo-link {
-    display: inline-block;
+    display: block;
+    width: 96px;
+    margin: 0 auto 16px;
 }
 
 .footer-logo-link:hover {
