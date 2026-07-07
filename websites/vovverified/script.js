@@ -28,10 +28,6 @@ app.innerHTML = `
         <a href="#investigations" class="btn btn-primary">Browse Investigations</a>
         <a href="https://vovstandard.com/" class="btn btn-secondary">Read the VOV Standard</a>
       </div>
-      <div class="hero-publisher">
-        <p>Published by Off Grid TV</p>
-        <p>An EVAI Initiative</p>
-      </div>
     </div>
   </section>
 
