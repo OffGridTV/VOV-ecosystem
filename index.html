@@ -6,6 +6,16 @@
     <title>VOV Verified</title>
     <link rel="canonical" href="https://vovverified.com/">
     <link rel="stylesheet" href="websites/vovverified/style.css">
+    <script>
+        (function routeByHost() {
+            var host = window.location.hostname.toLowerCase();
+            if (host === 'vovstandard.com' || host === 'www.vovstandard.com') {
+                if (window.location.pathname !== '/websites/vovstandard/' && window.location.pathname !== '/websites/vovstandard/index.html') {
+                    window.location.replace('/websites/vovstandard/');
+                }
+            }
+        })();
+    </script>
 </head>
 <body>
     <div id="app"></div>
