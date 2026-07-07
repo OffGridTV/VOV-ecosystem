@@ -21,8 +21,8 @@ app.innerHTML = `
   <section class="hero">
     <div class="hero-content">
       <h1>Independent Verification<br>for Real-World Decisions</h1>
-      <p class="hero-lead">A simple question shouldn't require twenty websites, six videos, two AI conversations, and a Reddit rabbit hole.</p>
-      <p class="hero-description">VOV independently investigates real-world claims through transparent methodology, documented evidence, and public results.</p>
+      <p class="hero-lead">Get independent product testing, speed tests, and real-world performance verification without the noise.</p>
+      <p class="hero-description">VOV independently investigates and tests products, services, and real-world performance through transparent methodology, documented evidence, and public results.</p>
       <div class="hero-buttons">
         <a href="#investigations" class="btn btn-primary">Browse Investigations</a>
         <a href="https://vovstandard.com/" class="btn btn-secondary">Read the VOV Standard</a>
