@@ -141,6 +141,16 @@ a {
     color: var(--muted);
 }
 
+.entity-link {
+    text-decoration: none;
+    transition: transform 140ms ease;
+}
+
+.entity-link:hover {
+    text-decoration: none;
+    transform: scale(1.035);
+}
+
 .masthead-standard,
 .masthead-publisher,
 .footer-standard,
