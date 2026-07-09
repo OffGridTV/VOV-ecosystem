@@ -289,15 +289,22 @@ a {
 /* Keep top generic speed tests cropped and centered. */
 .gallery-group[aria-labelledby="google-tests-title"] .gallery-grid img {
     object-fit: cover;
-    object-position: center center;
+    object-position: 50% 50%;
 }
 
 /* Show complete frames for Ookla and iPhone shots so key values stay centered. */
 .gallery-group[aria-labelledby="ookla-tests-title"] .gallery-grid img,
 .gallery-group[aria-labelledby="starlink-tests-title"] .gallery-grid img {
     object-fit: contain;
-    object-position: center center;
     background: #0b0b0b;
+}
+
+.gallery-group[aria-labelledby="ookla-tests-title"] .gallery-grid img {
+    object-position: 50% 56%;
+}
+
+.gallery-group[aria-labelledby="starlink-tests-title"] .gallery-grid img {
+    object-position: 50% 52%;
 }
 
 .gallery-grid figcaption {
