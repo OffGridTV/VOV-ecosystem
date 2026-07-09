@@ -37,38 +37,47 @@ a {
 .page-shell {
     width: min(var(--max), calc(100% - 32px));
     margin: 0 auto;
-    padding: 14px 0 40px;
+    padding: 10px 0 40px;
 }
 
 .top-bar {
     border-bottom: 1px solid var(--line);
-    padding: 8px 0 10px;
+    padding: 6px 0 8px;
 }
 
 .top-bar-nav {
     display: flex;
     gap: 18px;
     flex-wrap: wrap;
-    font-size: 0.82rem;
-    letter-spacing: 0.06em;
+    font-size: 0.75rem;
+    letter-spacing: 0.08em;
     text-transform: uppercase;
 }
 
 .top-bar-nav a {
     color: var(--muted);
     text-decoration: none;
+    opacity: 0.78;
 }
 
 .top-bar-nav a:hover,
 .top-bar-nav a[aria-current="page"] {
-    color: var(--ink);
+    color: var(--muted);
+    opacity: 1;
 }
 
 .masthead {
-    padding: 18px 0 18px;
+    padding: 30px 0 14px;
+    text-align: center;
 }
 
-.masthead-mark,
+.bookend-logo {
+    display: block;
+    width: clamp(150px, 16.5vw, 220px);
+    height: auto;
+    margin: 0 auto 10px;
+}
+
 .section-kicker {
     font-size: 0.76rem;
     letter-spacing: 0.22em;
@@ -76,10 +85,84 @@ a {
     color: var(--muted);
 }
 
-.masthead-subtitle {
-    margin-top: 6px;
+.masthead-publication {
     font-family: "Iowan Old Style", Georgia, serif;
-    font-size: 1rem;
+    font-size: 1.38rem;
+    font-weight: 600;
+    letter-spacing: 0.19em;
+    text-transform: uppercase;
+    color: var(--ink);
+}
+
+.masthead-ecosystem,
+.footer-ecosystem {
+    margin-top: 6px;
+    font-size: 0.72rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: #4f4a43;
+}
+
+.masthead-thesis,
+.footer-thesis {
+    margin-top: 16px;
+    font-family: "Iowan Old Style", Georgia, serif;
+    font-size: 1.12rem;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    color: var(--ink);
+    text-transform: uppercase;
+}
+
+.masthead-verified,
+.footer-verified {
+    font-weight: 700;
+}
+
+.masthead-process,
+.footer-process {
+    margin-top: 7px;
+    font-family: "Iowan Old Style", Georgia, serif;
+    font-size: 1.02rem;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+    color: var(--ink);
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+
+.masthead-entity,
+.footer-entity {
+    margin-top: 12px;
+    font-size: 0.74rem;
+    font-weight: 500;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--muted);
+}
+
+.masthead-entity + .masthead-entity,
+.footer-entity + .footer-entity {
+    margin-top: 4px;
+}
+
+.masthead-rule {
+    width: min(620px, 100%);
+    margin: 17px auto 14px;
+    border: 0;
+    border-top: 1px solid var(--line-strong);
+}
+
+.masthead-publication {
+    font-size: 1.15rem;
+    letter-spacing: 0.24em;
+}
+
+.footer-copyright {
+    margin-top: 12px;
+    font-size: 0.82rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
     color: var(--ink);
 }
 
@@ -122,7 +205,7 @@ a {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: 52% 47%;
+    object-position: 52% 60%;
     background: #d8d1c5;
     transform: scale(1.01);
 }
@@ -231,7 +314,6 @@ a {
 .finding-card p,
 .flow-step p,
 .investigation-body p,
-.ecosystem-footer p,
 .section-heading p {
     color: var(--muted);
 }
@@ -343,52 +425,10 @@ a {
 }
 
 .ecosystem-footer {
-    display: grid;
-    gap: 18px;
-    background: #141414;
-    color: #f2eee8;
-    border-color: #141414;
-}
-
-.ecosystem-title-wrap {
-    display: grid;
-    gap: 6px;
-}
-
-.ecosystem-stack {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    gap: 10px 16px;
-}
-
-.ecosystem-stack h2 {
-    font-size: 1rem;
-    color: #ffffff;
-}
-
-.ecosystem-stack p {
-    display: none;
-}
-
-.ecosystem-stack p,
-.footer-meta p,
-.ecosystem-footer .section-kicker {
-    color: rgba(242, 238, 232, 0.74);
-}
-
-.stack-arrow {
-    font-size: 1.35rem;
-    color: #74b082;
-}
-
-.footer-meta {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 12px 20px;
-    padding-top: 18px;
-    border-top: 1px solid rgba(255, 255, 255, 0.14);
-    font-size: 0.92rem;
+    text-align: center;
+    background: var(--paper);
+    border-color: var(--line);
+    color: var(--ink);
 }
 
 .published-shell,
@@ -534,7 +574,7 @@ a {
 
     .cover-image {
         min-height: 280px;
-        object-position: 58% 46%;
+        object-position: 58% 58%;
     }
 
     .cover-story {
@@ -587,5 +627,15 @@ a {
         font-size: 0.76rem;
         gap: 6px;
         letter-spacing: 0.07em;
+    }
+
+    .masthead-process,
+    .footer-process {
+        white-space: normal;
+    }
+
+    .bookend-logo {
+        width: clamp(132px, 42vw, 186px);
+        margin-bottom: 8px;
     }
 }
