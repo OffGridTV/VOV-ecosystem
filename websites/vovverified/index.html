@@ -3,16 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Redirecting to VOV Verified</title>
+    <title>VOV Verified</title>
+    <meta name="description" content="Independent verification for real-world decisions through transparent methodology, documented evidence, and public results.">
+    <meta name="robots" content="index,follow">
+    <link rel="canonical" href="https://vovverified.com/">
+    <link rel="stylesheet" href="style-old.css">
     <script>
-        if (window.location.pathname !== '/') {
-            window.location.replace('/');
-        }
+        (function routeByHost() {
+            var host = window.location.hostname.toLowerCase();
+            if (host === 'vovstandard.com' || host === 'www.vovstandard.com') {
+                if (window.location.pathname !== '/websites/vovstandard/' && window.location.pathname !== '/websites/vovstandard/index.html') {
+                    window.location.replace('/websites/vovstandard/');
+                }
+            }
+        })();
     </script>
 </head>
 <body>
-    <noscript>
-        <p><a href="/">Continue to homepage</a></p>
-    </noscript>
+    <header class="hero">
+        <nav class="nav" aria-label="VOV Verified navigation">
+            <div class="brand">VOV VERIFIED</div>
+            <div class="nav-links">
+                <a href="../../investigations/index.html">Investigations</a>
+                <a href="https://vovstandard.com/">Methodology</a>
+                <a href="https://offgridtv.com/">About</a>
+            </div>
+        </nav>
+
+        <section class="hero-content">
+            <h1>Independent Verification<br>for Real-World Decisions</h1>
+            <p class="lead">A simple question should not require twenty websites, six videos, two AI conversations, and a Reddit rabbit hole.</p>
+            <p>VOV investigates real-world claims through transparent methodology, documented evidence, and permanent public records.</p>
+            <div class="buttons">
+                <a class="primary" href="../../investigations/index.html">View Investigations</a>
+                <a class="secondary" href="https://vovstandard.com/">Read the VOV Standard</a>
+            </div>
+        </section>
+    </header>
 </body>
 </html>
