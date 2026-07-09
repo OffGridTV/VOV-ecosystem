@@ -85,6 +85,7 @@ a {
 
 .cover-story,
 .finding-card,
+.evidence-gallery,
 .standard-section,
 .ecosystem-footer {
     background: var(--paper);
@@ -214,6 +215,7 @@ a {
 }
 
 .finding-card,
+.evidence-gallery,
 .standard-section,
 .ecosystem-footer {
     margin-top: 22px;
@@ -237,6 +239,58 @@ a {
 .finding-card p {
     max-width: 58ch;
     margin-bottom: 14px;
+}
+
+.evidence-gallery {
+    margin-top: 22px;
+    padding: 28px;
+}
+
+.gallery-groups {
+    display: grid;
+    gap: 16px;
+}
+
+.gallery-group {
+    background: var(--card);
+    border: 1px solid var(--line);
+    padding: 18px;
+}
+
+.gallery-group h3 {
+    font-family: "Iowan Old Style", Georgia, serif;
+    font-size: 1.28rem;
+    letter-spacing: -0.01em;
+    margin-bottom: 12px;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(130px, 160px));
+    justify-content: start;
+    gap: 12px;
+}
+
+.gallery-grid figure {
+    background: #f7f4ee;
+    border: 1px solid var(--line);
+    overflow: hidden;
+}
+
+.gallery-grid img {
+    display: block;
+    width: 100%;
+    height: 110px;
+    object-fit: cover;
+    background: #d8d1c5;
+}
+
+.gallery-grid figcaption {
+    padding: 8px 10px;
+    font-size: 0.84rem;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--muted);
 }
 
 .section-heading {
@@ -434,6 +488,7 @@ a {
 
     .cover-story,
     .finding-card,
+    .evidence-gallery,
     .standard-section,
     .ecosystem-footer,
     .published-intro,
