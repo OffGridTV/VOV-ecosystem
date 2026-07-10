@@ -1,37 +1,298 @@
-@import url('/websites/vovverified/style.css');
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    color: #111827;
+    font-family: Aptos, "Segoe UI", Arial, sans-serif;
+    line-height: 1.55;
+    background:
+        radial-gradient(circle at 92% 8%, rgba(14, 116, 144, 0.18), transparent 32%),
+        radial-gradient(circle at 12% 18%, rgba(22, 101, 52, 0.12), transparent 28%),
+        linear-gradient(180deg, #f7f6f2 0%, #eef3f1 100%);
+}
+
+a {
+    color: inherit;
+}
+
+.page-shell {
+    width: min(1220px, calc(100% - 32px));
+    margin: 0 auto;
+    padding: 10px 0 40px;
+}
 
 .landing {
-    min-height: 100vh;
+    max-width: 980px;
+    margin: 0 auto;
+    padding: 44px 20px 56px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 24px;
+    gap: 28px;
+}
+
+.ecosystem-top {
+    background: rgba(255, 255, 255, 0.94);
+    border: 1px solid #d7e8df;
+    border-radius: 14px;
+    box-shadow: 0 12px 32px rgba(15, 23, 42, 0.08);
+    padding: 18px 18px 16px;
     text-align: center;
 }
 
-.landing h1 {
-    font-size: clamp(40px, 7vw, 72px);
-    letter-spacing: -1px;
-    font-family: "Avenir LT Std", "Avenir Next", Avenir, "Segoe UI", sans-serif;
-    font-weight: 300;
-    margin-bottom: 14px;
-}
-
-.lead,
-.support {
-    max-width: 820px;
-}
-
-.lead {
-    font-size: clamp(18px, 2.1vw, 24px);
-    line-height: 1.45;
-    color: #374151;
+.ecosystem-top-bar {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 8px;
     margin-bottom: 12px;
 }
 
-.support {
-    font-size: clamp(15px, 1.3vw, 18px);
-    line-height: 1.6;
-    color: #4b5563;
+.ecosystem-chip {
+    border: 1px solid #bfd7cb;
+    border-radius: 999px;
+    padding: 6px 12px;
+    font-size: 0.75rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #325246;
+    background: #f5fbf8;
+}
+
+.ecosystem-chip-active {
+    background: #173f34;
+    color: #ffffff;
+    border-color: #173f34;
+}
+
+.bookend-logo {
+    display: block;
+    width: clamp(150px, 16.5vw, 220px);
+    height: auto;
+    margin: 0 auto 10px;
+}
+
+.ecosystem-overline {
+    margin-top: 6px;
+    font-size: 0.72rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: #4f4a43;
+}
+
+.ecosystem-title {
+    margin-top: 16px;
+    font-family: "Iowan Old Style", Georgia, serif;
+    font-size: 1.12rem;
+    font-weight: 500;
+    letter-spacing: 0.06em;
+    color: #171717;
+    text-transform: uppercase;
+}
+
+.ecosystem-subtitle {
+    margin-top: 7px;
+    font-family: "Iowan Old Style", Georgia, serif;
+    font-size: 1.02rem;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+    color: #171717;
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+
+.ecosystem-subtitle span {
+    font-weight: 700;
+}
+
+.ecosystem-footer-new {
+    margin-top: 22px;
+    padding: 24px;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.94);
+    border: 1px solid #d7e8df;
+    border-radius: 14px;
+    box-shadow: 0 12px 32px rgba(15, 23, 42, 0.08);
+}
+
+.ecosystem-link-row {
+    margin-top: 12px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px 16px;
+}
+
+.ecosystem-link-row a {
+    text-decoration: none;
+    color: #173f34;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    font-size: 0.78rem;
+    text-transform: uppercase;
+}
+
+.ecosystem-link-row a:hover,
+.text-link:hover {
+    text-decoration: underline;
+}
+
+.footer-copyright {
+    margin-top: 12px;
+    font-size: 0.82rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #171717;
+}
+
+.hero,
+.mission,
+.connection-card,
+.focus {
+    background: rgba(255, 255, 255, 0.94);
+    border: 1px solid #d7e8df;
+    border-radius: 14px;
+    box-shadow: 0 12px 32px rgba(15, 23, 42, 0.08);
+}
+
+.hero,
+.mission,
+.focus {
+    padding: 24px;
+}
+
+.hero {
+    text-align: center;
+}
+
+.wordmark {
+    display: inline-flex;
+    align-items: baseline;
+    gap: 6px;
+    margin: 2px 0 14px;
+    padding: 0 4px;
+    font-family: "Avenir LT Std", "Avenir Next", Avenir, "Segoe UI", sans-serif;
+    font-size: clamp(2.6rem, 6vw, 5.2rem);
+    font-weight: 400;
+    letter-spacing: 0.12em;
+    line-height: 0.92;
+    text-transform: uppercase;
+    color: #132f28;
+}
+
+.wordmark-off,
+.wordmark-tv {
+    display: inline-block;
+    font: inherit;
+    letter-spacing: inherit;
+    color: inherit;
+}
+
+.slogan {
+    margin: 0 0 16px;
+    font-family: "Iowan Old Style", Georgia, serif;
+    font-size: clamp(1.15rem, 2vw, 1.5rem);
+    font-style: italic;
+    letter-spacing: 0.03em;
+    color: #355a4e;
+}
+
+.section-label {
+    font-size: 0.76rem;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: #0f766e;
+    font-weight: 700;
+}
+
+.hero h1 {
+    margin: 12px 0 14px;
+    font-size: clamp(38px, 5.7vw, 64px);
+    line-height: 1.02;
+    letter-spacing: -1.15px;
+}
+
+.tagline {
+    max-width: 760px;
+    margin: 0 auto;
+    font-size: clamp(17px, 2vw, 23px);
+    color: #374151;
+}
+
+.mission h2,
+.focus h2 {
+    margin-bottom: 12px;
+    font-size: clamp(26px, 3vw, 38px);
+}
+
+.mission p + p,
+.focus p + p {
+    margin-top: 12px;
+}
+
+.connection-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 18px;
+}
+
+.connection-card {
+    padding: 22px;
+}
+
+.connection-card h3 {
+    margin: 10px 0 10px;
+    font-size: 1.55rem;
+}
+
+.connection-card p {
+    color: #374151;
+}
+
+.text-link {
+    display: inline-block;
+    margin-top: 14px;
+    color: #173f34;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+@media (max-width: 920px) {
+    .connection-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 640px) {
+    .page-shell {
+        width: min(100%, calc(100% - 20px));
+        padding-top: 8px;
+    }
+
+    .landing {
+        padding: 28px 10px 40px;
+    }
+
+    .hero,
+    .mission,
+    .connection-card,
+    .focus,
+    .ecosystem-footer-new {
+        padding: 18px;
+    }
+
+    .wordmark {
+        gap: 8px;
+    }
+
+    .ecosystem-subtitle {
+        white-space: normal;
+    }
 }
