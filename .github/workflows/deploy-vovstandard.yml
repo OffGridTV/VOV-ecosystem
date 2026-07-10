@@ -38,6 +38,9 @@ jobs:
         run: |
           mkdir -p _site
           cp -r websites/vovstandard/. _site/
+          mkdir -p _site/assets
+          cp assets/EVAI\ Logo.svg _site/assets/EVAI\ Logo.svg
+          cp assets/VOV\ landing\ page\ image\ 7-26.png _site/assets/VOV\ landing\ page\ image\ 7-26.png
           cp -r constitution _site/constitution
           cp -r investigations _site/investigations
           mkdir -p _site/websites/vovverified
