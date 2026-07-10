@@ -3,6 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
     <title>Can Starlink Mini Replace Your Home Internet? | VOV Verified</title>
     <meta name="description" content="VOV Verified publishes evidence-based investigations. The latest published investigation documents Starlink Mini field testing at Goleta Beach, covering download speed, upload speed, latency, Wi-Fi performance, and repeatability.">
     <meta name="robots" content="index,follow">
@@ -19,7 +22,24 @@
     <meta name="twitter:title" content="Can Starlink Mini Replace Your Home Internet? | VOV Verified">
     <meta name="twitter:description" content="Field-tested Starlink Mini speed verification from Goleta Beach, California, published by VOV Verified.">
     <meta name="twitter:image" content="https://vovverified.com/assets/Starlink%20speed%20test%20results/homepage%20starlink%20photo.jpeg">
-    <link rel="stylesheet" href="websites/vovverified/style.css">
+    <link rel="stylesheet" href="websites/vovverified/style.css?v=20260709c">
+    <script>
+        (function forceFreshHtmlOncePerTab() {
+            try {
+                if (sessionStorage.getItem('evai-fresh-load') === '1') {
+                    return;
+                }
+                sessionStorage.setItem('evai-fresh-load', '1');
+                var url = new URL(window.location.href);
+                if (!url.searchParams.has('v')) {
+                    url.searchParams.set('v', String(Date.now()));
+                    window.location.replace(url.toString());
+                }
+            } catch (e) {
+                // Ignore storage or URL parsing issues and continue normal load.
+            }
+        })();
+    </script>
     <script type="application/ld+json">
         {
             "@context": "https://schema.org",
@@ -104,18 +124,16 @@
 </head>
 <body>
     <div class="page-shell">
-        <header class="top-bar" aria-label="Ecosystem navigation">
-            <nav class="top-bar-nav">
-                <a href="https://evai.us/">EVAI</a>
-                <a href="https://vovverified.com/" aria-current="page">VOV Verified</a>
-                <a href="https://vovstandard.com/">VOV Standard</a>
-                <a href="https://offgridtv.com/">Off Grid TV</a>
-            </nav>
-        </header>
-
-        <header class="masthead" aria-label="VOV Verified masthead">
-            <p class="masthead-mark">VOV VERIFIED</p>
-            <p class="masthead-subtitle">Independent Product Investigations</p>
+        <header class="ecosystem-top" aria-label="EVAI ecosystem masthead">
+            <div class="ecosystem-top-bar">
+                <a class="ecosystem-chip ecosystem-chip-active" href="https://vovverified.com/">VOV VERIFIED</a>
+                <a class="ecosystem-chip" href="https://vovstandard.com/">VOV STANDARD</a>
+                <a class="ecosystem-chip" href="https://offgridtv.com/">OFF GRID TV</a>
+            </div>
+            <img class="bookend-logo" src="assets/EVAI%20Logo.svg" alt="EVAI logo" width="220" height="82" decoding="async">
+            <p class="ecosystem-overline">THE EVIDENCE ECOSYSTEM</p>
+            <p class="ecosystem-title">QUESTIONS • EVIDENCE • CONCLUSIONS</p>
+            <p class="ecosystem-subtitle">VALIDATED • INVESTIGATED • <span>VERIFIED</span></p>
         </header>
 
         <main>
@@ -240,30 +258,16 @@
             </section>
         </main>
 
-        <footer class="ecosystem-footer">
-            <div class="ecosystem-title-wrap">
-                <p class="section-kicker">Part of the EVAI Evidence Ecosystem</p>
+        <footer class="ecosystem-footer-new" aria-label="EVAI ecosystem closing signature">
+            <img class="bookend-logo" src="assets/EVAI%20Logo.svg" alt="EVAI logo" width="220" height="82" decoding="async">
+            <p class="ecosystem-overline">THE EVIDENCE ECOSYSTEM</p>
+            <p class="ecosystem-title">A PUBLIC STANDARD FOR PUBLIC TRUST</p>
+            <div class="ecosystem-link-row">
+                <a href="https://vovverified.com/">VOV VERIFIED</a>
+                <a href="https://vovstandard.com/">VOV STANDARD</a>
+                <a href="https://offgridtv.com/">OFF GRID TV</a>
             </div>
-            <div class="ecosystem-stack" aria-label="Ecosystem relationship">
-                <div>
-                    <h2>EVAI</h2>
-                    <p>Evidence Architecture</p>
-                </div>
-                <div class="stack-arrow" aria-hidden="true">↓</div>
-                <div>
-                    <h2>VOV Standard</h2>
-                    <p>Investigation Methodology</p>
-                </div>
-                <div class="stack-arrow" aria-hidden="true">↓</div>
-                <div>
-                    <h2>Off Grid TV</h2>
-                    <p>Field Stories</p>
-                </div>
-            </div>
-            <div class="footer-meta">
-                <p>© 2026 EVAI</p>
-                <p>Cover photograph and speed test screenshots © 2026 Off Grid TV.</p>
-            </div>
+            <p class="footer-copyright">© 2026 EVAI</p>
         </footer>
     </div>
 </body>
