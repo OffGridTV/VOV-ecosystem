@@ -290,21 +290,25 @@ a {
     }
 }
 
-@media (max-width: 640px) {
+@media (max-width: 720px) {
     .page-shell {
-        width: min(100%, calc(100% - 20px));
-        padding-top: 8px;
+        width: min(var(--max), calc(100% - 20px));
+        padding-bottom: 24px;
     }
 
     .landing {
         padding: 28px 10px 40px;
     }
 
+    .ecosystem-top,
+    .ecosystem-footer-new {
+        padding: 20px;
+    }
+
     .hero,
     .mission,
     .connection-card,
-    .focus,
-    .ecosystem-footer-new {
+    .focus {
         padding: 18px;
     }
 
@@ -314,5 +318,10 @@ a {
 
     .ecosystem-subtitle {
         white-space: normal;
+    }
+
+    .bookend-logo {
+        width: clamp(132px, 42vw, 186px);
+        margin-bottom: 8px;
     }
 }
