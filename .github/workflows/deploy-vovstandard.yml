@@ -75,3 +75,15 @@ jobs:
 
           git commit -m "Deploy VOV Standard from ${GITHUB_SHA}"
           git push origin main
+
+      - name: Verify HTTPS endpoints
+        run: |
+          set -euo pipefail
+
+          echo "Checking apex domain..."
+          curl -fIsS https://vovstandard.com/ > /dev/null
+
+          echo "Checking www redirect and certificate..."
+          curl -fIsS https://www.vovstandard.com/ > /dev/null
+
+          echo "HTTPS checks passed for vovstandard.com and www.vovstandard.com"
