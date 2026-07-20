@@ -19,21 +19,22 @@ body {
     display: grid;
     place-items: center;
     align-content: center;
-    gap: 1.05rem;
+    gap: 1.8rem;
     text-align: center;
     min-height: 74vh;
     padding: 1rem 1rem 0;
+    transform: translateY(8px);
 }
 
 .wordmark {
     display: inline-flex;
     align-items: center;
-    gap: 0.35rem;
-    font-family: "Cormorant Garamond", "Bodoni MT", Didot, serif;
+    gap: 0.5rem;
+    font-family: "Cormorant Garamond", "Times New Roman", serif;
     font-weight: 600;
     font-size: clamp(3.2rem, 11.8vw, 7.8rem);
-    line-height: 0.82;
-    letter-spacing: 0.008em;
+    line-height: 0.84;
+    letter-spacing: 0.056em;
     text-transform: uppercase;
     color: #111111;
 }
@@ -47,11 +48,13 @@ body {
     font-size: 0.5em;
     line-height: 1;
     transform: translateY(0.04em);
+    margin-left: 0.04em;
+    margin-right: 0.055em;
 }
 
 .hero-tagline {
     margin: 0;
-    font-size: clamp(1.02rem, 1.42vw, 1.18rem);
+    font-size: clamp(0.97rem, 1.35vw, 1.12rem);
     line-height: 1.25;
     letter-spacing: 0.06em;
     text-transform: none;
@@ -61,12 +64,12 @@ body {
 .ecosystem {
     display: flex;
     justify-content: center;
-    align-items: flex-start;
+    align-items: center;
     height: clamp(150px, 18vh, 180px);
     padding: 8px 8px 6px;
     overflow: hidden;
-    background: #0b0b0b;
-    color: #ffffff;
+    background: #2a2f37;
+    color: #d6d9df;
     font-family: Aptos, "Segoe UI", Arial, sans-serif;
 }
 
@@ -74,8 +77,8 @@ body {
     display: inline-flex;
     flex-direction: column;
     align-items: center;
-    transform: scale(0.32);
-    transform-origin: center top;
+    transform: scale(0.26);
+    transform-origin: center center;
 }
 
 .link-top {
@@ -119,7 +122,7 @@ body {
     width: min(84vw, 520px);
     height: auto;
     filter: grayscale(1) brightness(0) invert(1);
-    opacity: 0.82;
+    opacity: 0.7;
 }
 
 .ecosystem-overline {
@@ -135,7 +138,7 @@ body {
 
 .link-top,
 .link-side {
-    color: rgba(255,255,255,0.62);
+    color: rgba(228,232,238,0.48);
     text-decoration: none;
     transition: color 140ms ease, transform 140ms ease;
 }
@@ -155,7 +158,7 @@ body {
 
 .link-top:hover, .link-top:focus-visible,
 .link-side:hover, .link-side:focus-visible {
-    color: #ffffff;
+    color: rgba(238,242,248,0.82);
     text-decoration: none;
     transform: scale(1.08);
     outline: none;
@@ -168,18 +171,18 @@ body {
 /* hovering the bottom line lights up EVAI */
 .logo-lockup:has(.ecosystem-overline:hover) .bookend-logo {
     opacity: 0.75;
-    filter: grayscale(1) brightness(0) invert(1) drop-shadow(0 0 3px rgba(255,255,255,0.12));
+    filter: grayscale(1) brightness(0) invert(1) drop-shadow(0 0 3px rgba(228,232,238,0.1));
 }
 .logo-lockup:has(.ecosystem-overline:hover) .ecosystem-overline {
-    color: rgba(255,255,255,0.92);
+    color: rgba(228,232,238,0.74);
 }
 /* hovering EVAI lights up the bottom line */
 .logo-lockup:has(.logo-link:hover) .ecosystem-overline {
-    color: rgba(255,255,255,0.92);
+    color: rgba(228,232,238,0.74);
 }
 .logo-lockup:has(.logo-link:hover) .bookend-logo {
     opacity: 0.75;
-    filter: grayscale(1) brightness(0) invert(1) drop-shadow(0 0 3px rgba(255,255,255,0.12));
+    filter: grayscale(1) brightness(0) invert(1) drop-shadow(0 0 3px rgba(228,232,238,0.1));
 }
 
 @media (max-width: 640px) {
@@ -190,6 +193,7 @@ body {
     .hero {
         min-height: 72vh;
         padding: 0.9rem 0.75rem 0;
+        transform: translateY(6px);
     }
 
     .ecosystem {
