@@ -1,327 +1,216 @@
-:root {
-    --page: #f3f0ea;
-    --paper: #fcfbf8;
-    --card: #ffffff;
-    --ink: #171717;
-    --muted: #5f5a52;
-    --line: #d8d1c5;
-    --line-strong: #b8af9f;
-    --accent: #0f5d2f;
-    --accent-soft: #e7f0e8;
-    --dark: #121212;
-    --shadow: 0 18px 48px rgba(18, 18, 18, 0.08);
-    --max: 1220px;
-}
-
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
-html,
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { min-height: 100%; }
 body {
-    margin: 0;
+    min-height: 100vh;
+    background: #ffffff;
+    color: #111111;
+    font-family: "Inter", "Segoe UI", Arial, sans-serif;
+}
+
+.page {
+    min-height: 100vh;
+    display: grid;
+    grid-template-rows: 1fr auto;
+    gap: 0.55rem;
     padding: 0;
-}
-
-body {
-    background: linear-gradient(180deg, #f7f4ee 0%, var(--page) 100%);
-    color: var(--ink);
-    font-family: Aptos, "Segoe UI", Arial, sans-serif;
-    line-height: 1.55;
-}
-
-a {
-    color: inherit;
-}
-
-.page-shell {
-    width: min(var(--max), calc(100% - 32px));
-    margin: 0 auto;
-    padding: 10px 0 40px;
-}
-
-.landing {
-    max-width: 980px;
-    margin: 0 auto;
-    padding: 44px 20px 56px;
-    display: flex;
-    flex-direction: column;
-    gap: 28px;
-}
-
-.ecosystem-top {
-    background: var(--paper);
-    border: 1px solid var(--line);
-    box-shadow: var(--shadow);
-    border-radius: 14px;
-    padding: 18px 18px 16px;
-    text-align: center;
-}
-
-.ecosystem-top-bar {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 8px;
-    margin-bottom: 12px;
-}
-
-.ecosystem-chip {
-    border: 1px solid var(--line-strong);
-    border-radius: 999px;
-    padding: 6px 12px;
-    font-size: 0.75rem;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    text-decoration: none;
-    color: var(--muted);
-    background: #f7f4ee;
-}
-
-.ecosystem-chip-active {
-    background: var(--ink);
-    color: #ffffff;
-    border-color: var(--ink);
-}
-
-.bookend-logo {
-    display: block;
-    width: clamp(150px, 16.5vw, 220px);
-    height: auto;
-    margin: 0 auto 10px;
-}
-
-.ecosystem-overline {
-    margin-top: 6px;
-    font-size: 0.72rem;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
-    color: #4f4a43;
-}
-
-.ecosystem-title {
-    margin-top: 16px;
-    font-family: "Iowan Old Style", Georgia, serif;
-    font-size: 1.12rem;
-    font-weight: 500;
-    letter-spacing: 0.06em;
-    color: var(--ink);
-    text-transform: uppercase;
-}
-
-.ecosystem-subtitle {
-    margin-top: 7px;
-    font-family: "Iowan Old Style", Georgia, serif;
-    font-size: 1.02rem;
-    font-weight: 500;
-    letter-spacing: 0.05em;
-    color: var(--ink);
-    text-transform: uppercase;
-    white-space: nowrap;
-}
-
-.ecosystem-subtitle span {
-    font-weight: 700;
-}
-
-.ecosystem-footer-new {
-    margin-top: 22px;
-    padding: 28px;
-    text-align: center;
-    background: var(--paper);
-    border: 1px solid var(--line);
-    border-radius: 14px;
-    box-shadow: var(--shadow);
-}
-
-.ecosystem-link-row {
-    margin-top: 12px;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 10px 16px;
-}
-
-.ecosystem-link-row a {
-    text-decoration: none;
-    color: var(--muted);
-    font-weight: 700;
-    letter-spacing: 0.08em;
-    font-size: 0.78rem;
-    text-transform: uppercase;
-}
-
-.ecosystem-link-row a:hover,
-.text-link:hover {
-    text-decoration: underline;
-}
-
-.footer-copyright {
-    margin-top: 12px;
-    font-size: 0.82rem;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    color: var(--ink);
-}
-
-.hero,
-.mission,
-.connection-card,
-.focus {
-    background: rgba(255, 255, 255, 0.94);
-    border: 1px solid #d7e8df;
-    border-radius: 14px;
-    box-shadow: 0 12px 32px rgba(15, 23, 42, 0.08);
-}
-
-.hero,
-.mission,
-.focus {
-    padding: 24px;
 }
 
 .hero {
+    display: grid;
+    place-items: center;
+    align-content: center;
+    gap: 1.05rem;
     text-align: center;
+    min-height: 74vh;
+    padding: 1rem 1rem 0;
 }
 
 .wordmark {
     display: inline-flex;
-    align-items: baseline;
-    gap: 6px;
-    margin: 2px 0 14px;
-    padding: 0 4px;
-    font-family: "Avenir LT Std", "Avenir Next", Avenir, "Segoe UI", sans-serif;
-    font-size: clamp(2.6rem, 6vw, 5.2rem);
-    font-weight: 400;
-    letter-spacing: 0.12em;
-    line-height: 0.92;
+    align-items: center;
+    gap: 0.35rem;
+    font-family: "Cormorant Garamond", "Bodoni MT", Didot, serif;
+    font-weight: 600;
+    font-size: clamp(3.2rem, 11.8vw, 7.8rem);
+    line-height: 0.82;
+    letter-spacing: 0.008em;
     text-transform: uppercase;
-    color: #132f28;
+    color: #111111;
 }
 
-.wordmark-off,
-.wordmark-tv {
+.wordmark .word {
     display: inline-block;
-    font: inherit;
-    letter-spacing: inherit;
-    color: inherit;
 }
 
-.slogan {
-    margin: 0 0 16px;
-    font-family: "Iowan Old Style", Georgia, serif;
-    font-size: clamp(1.15rem, 2vw, 1.5rem);
-    font-style: italic;
-    letter-spacing: 0.03em;
-    color: #355a4e;
+.separator {
+    display: inline-block;
+    font-size: 0.5em;
+    line-height: 1;
+    transform: translateY(0.04em);
 }
 
-.section-label {
-    font-size: 0.76rem;
-    letter-spacing: 0.22em;
-    text-transform: uppercase;
-    color: #0f766e;
-    font-weight: 700;
+.hero-tagline {
+    margin: 0;
+    font-size: clamp(1.02rem, 1.42vw, 1.18rem);
+    line-height: 1.25;
+    letter-spacing: 0.06em;
+    text-transform: none;
+    color: rgba(17, 17, 17, 0.66);
 }
 
-.hero h1 {
-    margin: 12px 0 14px;
-    font-size: clamp(24px, 3.6vw, 40px);
-    line-height: 1.02;
-    letter-spacing: -0.7px;
-    font-weight: 500;
-    color: #25313a;
+.ecosystem {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    height: clamp(150px, 18vh, 180px);
+    padding: 8px 8px 6px;
+    overflow: hidden;
+    background: #0b0b0b;
+    color: #ffffff;
+    font-family: Aptos, "Segoe UI", Arial, sans-serif;
 }
 
-.tagline {
-    max-width: 760px;
-    margin: 0 auto;
-    font-size: clamp(17px, 2vw, 23px);
-    color: #374151;
+.logo-lockup {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    transform: scale(0.32);
+    transform-origin: center top;
 }
 
-.mission h2,
-.focus h2 {
-    margin-bottom: 12px;
-    font-size: clamp(26px, 3vw, 38px);
-}
-
-.mission h2 {
+.link-top {
+    display: block;
+    width: min(84vw, 520px);
     text-align: center;
+    margin-bottom: -28px;
+    font-size: 1.4rem;
+    letter-spacing: 1.35em;
+    position: relative;
+    left: 2%;
 }
 
-.mission p + p,
-.focus p + p {
-    margin-top: 12px;
+.logo-row {
+    display: flex;
+    align-items: center;
 }
 
-.connection-grid {
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 18px;
+.link-side {
+    writing-mode: vertical-rl;
+    font-size: 1rem;
+    letter-spacing: 1.1em;
+    text-transform: uppercase;
 }
 
-.connection-card {
-    padding: 22px;
+.link-left {
+    transform: rotate(180deg);
+    margin-right: 12px;
+    position: relative;
+    top: -8px;
 }
 
-.connection-card h3 {
-    margin: 10px 0 10px;
-    font-size: 1.55rem;
+.link-right {
+    margin-left: 5px;
+    position: relative;
+    top: 14px;
 }
 
-.connection-card p {
-    color: #374151;
+.bookend-logo {
+    display: block;
+    width: min(84vw, 520px);
+    height: auto;
+    filter: grayscale(1) brightness(0) invert(1);
+    opacity: 0.82;
 }
 
-.text-link {
-    display: inline-block;
-    margin-top: 14px;
-    color: #173f34;
-    font-weight: 700;
+.ecosystem-overline {
+    display: block;
+    width: min(84vw, 520px);
+    text-align: center;
+    margin-top: -12px;
+    font-size: 1rem;
+    letter-spacing: 0.77em;
+    text-transform: uppercase;
+    color: rgba(245,242,234,0.42);
+}
+
+.link-top,
+.link-side {
+    color: rgba(255,255,255,0.62);
     text-decoration: none;
+    transition: color 140ms ease, transform 140ms ease;
 }
 
-@media (max-width: 920px) {
-    .connection-grid {
-        grid-template-columns: 1fr;
-    }
+.logo-link {
+    display: block;
+    line-height: 0;
 }
 
-@media (max-width: 720px) {
-    .page-shell {
-        width: min(var(--max), calc(100% - 20px));
-        padding-bottom: 24px;
+.bookend-logo {
+    transition: opacity 200ms ease, filter 200ms ease;
+}
+
+.ecosystem-overline {
+    transition: color 200ms ease;
+}
+
+.link-top:hover, .link-top:focus-visible,
+.link-side:hover, .link-side:focus-visible {
+    color: #ffffff;
+    text-decoration: none;
+    transform: scale(1.08);
+    outline: none;
+}
+
+.link-left:hover, .link-left:focus-visible {
+    transform: rotate(180deg) scale(1.08);
+}
+
+/* hovering the bottom line lights up EVAI */
+.logo-lockup:has(.ecosystem-overline:hover) .bookend-logo {
+    opacity: 0.75;
+    filter: grayscale(1) brightness(0) invert(1) drop-shadow(0 0 3px rgba(255,255,255,0.12));
+}
+.logo-lockup:has(.ecosystem-overline:hover) .ecosystem-overline {
+    color: rgba(255,255,255,0.92);
+}
+/* hovering EVAI lights up the bottom line */
+.logo-lockup:has(.logo-link:hover) .ecosystem-overline {
+    color: rgba(255,255,255,0.92);
+}
+.logo-lockup:has(.logo-link:hover) .bookend-logo {
+    opacity: 0.75;
+    filter: grayscale(1) brightness(0) invert(1) drop-shadow(0 0 3px rgba(255,255,255,0.12));
+}
+
+@media (max-width: 640px) {
+    .page {
+        gap: 0;
     }
 
-    .landing {
-        padding: 28px 10px 40px;
+    .hero {
+        min-height: 72vh;
+        padding: 0.9rem 0.75rem 0;
     }
 
-    .ecosystem-top,
-    .ecosystem-footer-new {
-        padding: 20px;
-    }
-
-    .hero,
-    .mission,
-    .connection-card,
-    .focus {
-        padding: 18px;
+    .ecosystem {
+        height: 124px;
+        padding: 6px 6px 4px;
     }
 
     .wordmark {
-        gap: 8px;
+        gap: 0.32rem;
     }
 
-    .ecosystem-subtitle {
-        white-space: normal;
+    .link-top {
+        letter-spacing: 1em;
+        margin-bottom: -18px;
     }
 
-    .bookend-logo {
-        width: clamp(132px, 42vw, 186px);
-        margin-bottom: 8px;
+    .link-side {
+        letter-spacing: 0.9em;
+    }
+
+    .ecosystem-overline {
+        letter-spacing: 0.5em;
     }
 }
