@@ -97,7 +97,7 @@ body::before {
 .hero-identity {
     margin: 0;
     font-size: clamp(1.2rem, 2.1vw, 1.58rem);
-    letter-spacing: clamp(0.34em, 1.02vw, 0.54em);
+    letter-spacing: clamp(0.4em, 1.16vw, 0.62em);
     white-space: nowrap;
     text-transform: uppercase;
     color: var(--hero-identity);
@@ -131,7 +131,7 @@ body::before {
     flex-direction: column;
     align-items: center;
     gap: 0;
-    transform: scale(0.33);
+    transform: scale(0.385);
     transform-origin: center center;
 }
 
@@ -147,9 +147,9 @@ body::before {
     display: block;
     width: var(--evai-mark-width);
     text-align: center;
-    margin-top: -4px;
+    margin-top: 6px;
     font-size: 1rem;
-    letter-spacing: 0.86em;
+    letter-spacing: 0.84em;
     word-spacing: 0;
     text-transform: uppercase;
     color: rgba(245, 242, 234, 0.46);
@@ -208,7 +208,7 @@ body::before {
 
     .hero-identity {
         font-size: clamp(1.04rem, 4.4vw, 1.3rem);
-        letter-spacing: 0.3em;
+        letter-spacing: 0.36em;
     }
 
     .hero-tagline {
@@ -222,12 +222,12 @@ body::before {
     }
 
     .logo-lockup {
-        transform: scale(0.255);
+        transform: scale(0.3);
     }
 
     .ecosystem-overline {
         font-size: 1rem;
-        letter-spacing: 0.86em;
+        letter-spacing: 0.84em;
         word-spacing: 0;
     }
 }
