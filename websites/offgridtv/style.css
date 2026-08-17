@@ -54,7 +54,7 @@ body::before {
     display: grid;
     place-items: center;
     align-content: center;
-    min-height: 100vh;
+    min-height: calc(100vh - 10rem);
     padding: clamp(1rem, 2.6vw, 2.2rem) 1rem;
 }
 
@@ -122,6 +122,46 @@ body::before {
     animation-delay: 210ms;
 }
 
+.outreach {
+    width: min(100% - 2rem, 48rem);
+    margin: clamp(3.8rem, 10vw, 7rem) auto 0;
+    color: rgba(214, 231, 232, 0.66);
+    text-align: center;
+}
+
+.outreach-primary {
+    font-size: clamp(0.78rem, 1.2vw, 0.88rem);
+    line-height: 1.65;
+    letter-spacing: 0.04em;
+}
+
+.outreach-secondary {
+    margin-top: 1.35rem;
+    color: rgba(191, 214, 229, 0.62);
+    font-size: clamp(0.68rem, 1vw, 0.78rem);
+    line-height: 1.7;
+    letter-spacing: 0.03em;
+}
+
+.outreach a {
+    color: rgba(134, 194, 181, 0.78);
+    text-underline-offset: 0.18em;
+    transition: color 180ms ease;
+}
+
+.outreach a:hover,
+.outreach a:focus-visible {
+    color: rgba(67, 159, 136, 0.97);
+}
+
+.site-footer {
+    margin: clamp(2.8rem, 7vh, 4.5rem) auto 1.35rem;
+    color: rgba(191, 214, 229, 0.4);
+    font-size: 0.62rem;
+    letter-spacing: 0.06em;
+    text-align: center;
+}
+
 @keyframes rise-in {
     from {
         transform: translateY(20px) scale(0.808);
@@ -146,7 +186,7 @@ body::before {
 
 @media (max-width: 640px) {
     .hero {
-        min-height: 65vh;
+        min-height: calc(100vh - 12rem);
         padding: 0.85rem 0.75rem 0;
     }
 
