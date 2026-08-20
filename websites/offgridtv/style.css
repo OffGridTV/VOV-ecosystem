@@ -136,6 +136,7 @@ body::before {
     font-size: clamp(0.78rem, 1.2vw, 0.88rem);
     line-height: 1.65;
     letter-spacing: 0.04em;
+    white-space: nowrap;
 }
 
 .outreach-secondary {
@@ -219,5 +220,10 @@ body::before {
     .hero-tagline {
         font-size: clamp(1.06rem, 5vw, 1.34rem);
         letter-spacing: 0.05em;
+    }
+
+    .outreach-primary {
+        font-size: clamp(0.56rem, 2.45vw, 0.78rem);
+        letter-spacing: 0.02em;
     }
 }
